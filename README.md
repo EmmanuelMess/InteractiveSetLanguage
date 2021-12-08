@@ -41,3 +41,24 @@ Manejo de errores:
   se ingreso con el constructor "{}", por ejemplo "x = [3.0, 2.0]" es vacio, pero probablemente
   un error de tipeo, entonces se emite: "Warning: x is empty but {} was not used to declare it".
 * Para manejo de errores de variables no declaradas se emite "Error: x not declared".
+
+## Examples
+
+```
+ISL> a = {}
+ISL> print a
+[]
+ISL> b = {1.0}
+ISL> print b
+[SingletonRange 1.0]
+ISL> c = {1.0, 2.0}
+ISL> print c
+[SingletonRange 1.0, SingletonRange 2.0]
+ISL> d = [3.0, 4.0]
+ISL> print d
+[3.0 +=+ 4.0]
+ISL> e = c + d
+ISL> print e
+[SingletonRange 1.0, SingletonRange 2.0, 3.0 +=+ 4.0]
+
+```
